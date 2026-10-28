@@ -19,7 +19,17 @@ class Connection
 
     public function name(): string
     {
-        return $this->resolved ??= $this->resolve();
+        if ($this->resolved !== null) {
+            return $this->resolved;
+        }
+
+        $name = $this->resolved = $this->resolve();
+
+        if ($name === self::OWN) {
+            $this->migrate();
+        }
+
+        return $name;
     }
 
     /** Creates the tables, on the connection `name()` resolved. */

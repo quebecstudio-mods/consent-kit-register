@@ -5,7 +5,6 @@ one: its schema, its storage and its queries.
 
 | Integration | Package |
 |---|---|
-| Craft CMS 6 | `quebecstudio-mods/craftcms-consent-kit` 6.x |
 | Statamic 6 | `quebecstudio-mods/statamic-consent-kit` 6.x |
 
 Requires PHP 8.2, `illuminate/database`, `illuminate/support` and
@@ -13,7 +12,8 @@ Requires PHP 8.2, `illuminate/database`, `illuminate/support` and
 integration decides what to record and how to show it, this keeps it.
 
 `quebecstudio-mods/laravel-consent-kit` does not use it — it renders the
-banner and leaves the register to the application.
+banner and leaves the register to the application. `craftcms-consent-kit` keeps
+its own, in Craft CMS table and column conventions.
 
 ## Contents
 
